@@ -1,10 +1,9 @@
 package pages;
 
-import static com.codeborne.selenide.Condition.attribute;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Selenide.$$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
+
 import tests.TestBase;
 
 
@@ -32,10 +31,17 @@ public class DreamKassPage extends TestBase {
                 .shouldBe(visible)
                 .shouldHave(attribute("href", baseUrl + "/dreamkas-start-atol/"));
 
-        $$(".catalog-banners a").get(3)
+        return this;
+    }
+
+    public DreamKassPage servicesCards () {
+        $$(".dk-section-goods__item-link").get(2)
                 .shouldBe(visible)
-                .shouldHave(attribute("href", baseUrl + "/dreamkas-start-atol/"));
+                .shouldHave(attribute("href",baseUrl +  "/kassy-viki/dreamkas-start-shawarma/kupit/#?kit=%7B%22287%22%3A700%7D")).click();
+        $(".dk-section-customer-order__total-title").sibling(0).shouldHave(text("9 900 ₽"));
+
 
         return this;
     }
+
 }
