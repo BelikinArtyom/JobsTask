@@ -1,7 +1,11 @@
 package tests;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import helpers.Attach;
 import io.qameta.allure.*;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -14,6 +18,16 @@ import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
 public class DreamKassSolutions extends TestBase {
 
+
+    @AfterEach
+    void Attach() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.getVideoUrl();
+        Attach.addVideo();
+    }
+
     @Feature("Страница 'Решения'")
     @Story("Блоки на странице 'Решения'")
     @Owner("belikinA")
@@ -23,13 +37,14 @@ public class DreamKassSolutions extends TestBase {
     @Test
     public void solutionHeadersTest() {
 
+        SelenideLogger.addListener("allure", new AllureSelenide());
         DreamKassPage dreamKassPage = new DreamKassPage();
 
-        step("Открываем форму", () -> {
+        step("Открываем страницу", () -> {
             dreamKassPage.openPage();
         });
 
-        step("Открываем форму", () -> {
+        step("Проверяем, что ссылка баннера ведет на корректную страницу", () -> {
             dreamKassPage.bannerHrefCheck();
         });
     }
@@ -43,9 +58,10 @@ public class DreamKassSolutions extends TestBase {
     @Test
     public void servicePriceTest() {
 
+        SelenideLogger.addListener("allure", new AllureSelenide());
         DreamKassPage dreamKassPage = new DreamKassPage();
 
-        step("Открываем форму", () -> {
+        step("Открываем страницу", () -> {
             dreamKassPage.openPage();
         });
 
@@ -61,11 +77,12 @@ public class DreamKassSolutions extends TestBase {
     @DisplayName("Модель товара для предзаказа пробрасывается в попап обратной связи")
     @Tag("WorkWork")
     @Test
-    public void preOrderCallModel () {
+    public void preOrderCallModelTest () {
 
+        SelenideLogger.addListener("allure", new AllureSelenide());
         DreamKassPage dreamKassPage = new DreamKassPage();
 
-        step("Открываем форму", () -> {
+        step("Открываем страницу", () -> {
             dreamKassPage.openPage();
         });
 

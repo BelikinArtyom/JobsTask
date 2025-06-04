@@ -55,3 +55,8 @@ tasks.withType(Test) {
         }
     }
 }
+    task cv_job_tests(type: Test) {
+        useJUnitPlatform {
+            includeTags("WorkWork")
+        }
+    }
