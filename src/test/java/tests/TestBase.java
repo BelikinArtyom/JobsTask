@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
@@ -39,5 +40,8 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
+        Selenide.webdriver().driver().getWebDriver().manage().addCookie(
+                new org.openqa.selenium.Cookie("current_city", "0JLQvtC70LPQvtCz0YDQsNC0")
+        );
     }
 }
