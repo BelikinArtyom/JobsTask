@@ -3,7 +3,7 @@ package pages;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
-
+import com.codeborne.selenide.Condition;
 import tests.TestBase;
 
 
@@ -34,14 +34,20 @@ public class DreamKassPage extends TestBase {
         return this;
     }
 
-    public DreamKassPage servicesCards () {
+    public DreamKassPage shawarmaCardPriceCheck() {
         $$(".dk-section-goods__item-link").get(2)
                 .shouldBe(visible)
-                .shouldHave(attribute("href",baseUrl +  "/kassy-viki/dreamkas-start-shawarma/kupit/#?kit=%7B%22287%22%3A700%7D")).click();
+                .shouldHave(attribute("href", baseUrl + "/kassy-viki/dreamkas-start-shawarma/kupit/#?kit=%7B%22287%22%3A700%7D")).click();
         $(".dk-section-customer-order__total-title").sibling(0).shouldHave(text("9 900 ₽"));
-
-
         return this;
     }
 
+    public DreamKassPage preOrderPopupModel() {
+        $$(".dk-section-goods__item h3").get(1).shouldHave(text("Онлайн-касса Viki Mini")).$(".md-ink-ripple").is(clickable);
+        $$(".md-button").findBy(Condition.text("Предзаказ"))
+                .shouldBe(Condition.visible)
+                .click();
+        $(".dk-unit-feedback__inner").shouldHave(text("Для заказа Онлайн-касса Viki Mini"));
+        return this;
+    }
 }
