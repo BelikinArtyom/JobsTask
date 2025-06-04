@@ -10,6 +10,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CustomerDisplayPage;
+
+import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
 public class DreamKassCustomerDisplay extends TestBase {
@@ -41,6 +43,8 @@ public class DreamKassCustomerDisplay extends TestBase {
         step("Открываем страницу с дефолтным товаром", () -> {
             customerDisplayPage.openPage();
         });
+
+        sleep(100);
 
         step("Проверяем текст дефолтного товара", () -> {
             customerDisplayPage.defaultItem();

@@ -9,12 +9,9 @@ import static com.codeborne.selenide.Selenide.*;
 public class CustomerDisplayPage extends TestBase {
 
     public final CustomerDisplayPage openPage() {
-        open("https://dreamkas.ru/");
-        Selenide.webdriver().driver().getWebDriver().manage().addCookie(
-                new org.openqa.selenium.Cookie("current_city", "0JLQvtC70LPQvtCz0YDQsNC0")
-        );
-        sleep(100);
         open("/periferiya/displey-pokupatelya/kupit/");
+        Selenide.webdriver().driver().getWebDriver().manage().addCookie(
+                new org.openqa.selenium.Cookie("current_city", "0JLQvtC70LPQvtCz0YDQsNC0"));
         return this;
     }
 
