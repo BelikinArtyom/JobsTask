@@ -79,6 +79,8 @@ public class DreamKassCustomerDisplay extends TestBase {
             customerDisplayPage.openPage();
         });
 
+        sleep(100);
+
         step("Выбираем новый товар через радиобаттон", () -> {
             customerDisplayPage.selectNewItem();
         });
