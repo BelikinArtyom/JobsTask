@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
+import java.util.UUID;
 
 public class TestBase {
 
@@ -36,7 +37,8 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.of(
                 "enableVNC", true,
-                "enableVideo", true
+                "enableVideo", true,
+             "name", "Test: " + UUID.randomUUID()
         ));
         Configuration.browserCapabilities = capabilities;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
