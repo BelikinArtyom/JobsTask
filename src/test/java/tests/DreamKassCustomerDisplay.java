@@ -83,7 +83,6 @@ public class DreamKassCustomerDisplay extends TestBase {
         sleep(1000);
         $(".c-layout").pressEscape();
 
-
         step("Выбираем новый товар через радиобаттон", () -> {
             customerDisplayPage.selectNewItem();
         });
