@@ -25,7 +25,7 @@ public class TestBase {
         Configuration.browserSize = BROWSER_SIZE;
         Configuration.baseUrl = "https://dreamkas.ru";
         Configuration.pageLoadStrategy = "eager";
-//        Configuration.headless = true;
+        Configuration.headless = true;
         Configuration.holdBrowserOpen = false;
         Configuration.remote = String.format("https://%s:%s@%s/wd/hub",
                 selenoidLogin,
