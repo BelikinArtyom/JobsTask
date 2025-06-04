@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CustomerDisplayPage;
 
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
@@ -79,7 +80,9 @@ public class DreamKassCustomerDisplay extends TestBase {
             customerDisplayPage.openPage();
         });
 
-        sleep(100);
+        sleep(1000);
+        $(".c-layout").pressEscape();
+
 
         step("Выбираем новый товар через радиобаттон", () -> {
             customerDisplayPage.selectNewItem();
