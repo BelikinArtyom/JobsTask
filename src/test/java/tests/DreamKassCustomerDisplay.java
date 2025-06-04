@@ -83,11 +83,8 @@ public class DreamKassCustomerDisplay extends TestBase {
             customerDisplayPage.selectNewItem();
         });
 
-        step("Выбираем новый товар через радиобаттон", () -> {
+        step("Добавляем новый товар в корзину", () -> {
             customerDisplayPage.addToCartItem();
         });
-
-        System.out.println("Cookies after setting: " +
-                Selenide.webdriver().driver().getWebDriver().manage().getCookies());
     }
 }
