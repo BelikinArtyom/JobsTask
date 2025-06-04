@@ -24,9 +24,7 @@ public class TestBase {
 //        Configuration.browser = BROWSER;
 //        Configuration.browserVersion = browserVersion;
 //        Configuration.browserSize = BROWSER_SIZE;
-        Selenide.webdriver().driver().getWebDriver().manage().addCookie(
-                new org.openqa.selenium.Cookie("current_city", "0JLQvtC70LPQvtCz0YDQsNC0")
-        );
+
         Configuration.baseUrl = "https://dreamkas.ru";
         Configuration.pageLoadStrategy = "eager";
         Configuration.headless = false;
