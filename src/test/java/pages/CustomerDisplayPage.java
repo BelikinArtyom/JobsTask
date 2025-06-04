@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.Selenide;
 import tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
@@ -10,6 +11,9 @@ public class CustomerDisplayPage extends TestBase {
 
     public final CustomerDisplayPage openPage() {
         open("/periferiya/displey-pokupatelya/kupit/");
+        Selenide.webdriver().driver().getWebDriver().manage().addCookie(
+                new org.openqa.selenium.Cookie("current_city", "0JLQvtC70LPQvtCz0YDQsNC0")
+        );
         return this;
     }
 

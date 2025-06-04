@@ -4,6 +4,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import tests.TestBase;
 
 
@@ -11,6 +12,9 @@ public class DreamKassPage extends TestBase {
 
     public DreamKassPage openPage() {
         open("/oborudovanie");
+        Selenide.webdriver().driver().getWebDriver().manage().addCookie(
+                new org.openqa.selenium.Cookie("current_city", "0JLQvtC70LPQvtCz0YDQsNC0")
+        );
         return this;
     }
 
