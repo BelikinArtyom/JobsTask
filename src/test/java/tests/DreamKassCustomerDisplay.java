@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.Attach;
 import io.qameta.allure.*;
@@ -52,6 +53,9 @@ public class DreamKassCustomerDisplay extends TestBase {
         step("Проверяем текст выбранного товара", () -> {
             customerDisplayPage.selectedItemInfo();
         });
+
+        System.out.println("Cookies after setting: " +
+                Selenide.webdriver().driver().getWebDriver().manage().getCookies());
     }
 
 
@@ -78,5 +82,8 @@ public class DreamKassCustomerDisplay extends TestBase {
         step("Выбираем новый товар через радиобаттон", () -> {
             customerDisplayPage.addToCartItem();
         });
+
+        System.out.println("Cookies after setting: " +
+                Selenide.webdriver().driver().getWebDriver().manage().getCookies());
     }
 }
