@@ -7,14 +7,12 @@
     "language": "en",
     "allureFolder": "C:\\Users\\Bilop\\AppData\\Local\\Temp\\9989200815495292025\\allure-report",
     "enableChart": true,
-    "enableSuitesPublishing": false,
+    "enableSuitesPublishing": true,
     "customData": {}
   },
   "telegram": {
     "token": "7882373975:AAHVug1MvkBBOJ_mpMQcAyXQdTyNR2gRKoE",
     "chat": "-1002889517578",
-    "topic": "",
-    "replyTo": "",
     "templatePath": "/templates/telegram.ftl"
   }
 }
