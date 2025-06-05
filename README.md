@@ -56,14 +56,14 @@ ____
 ## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/"><img src="images/jenk.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 
 ### **Параметры сборки в Jenkins:**
 
 - *browser (браузер, по умолчанию chrome)*
-- *browserVersion (версия браузера, по умолчанию 100.0)*
+- *browserVersion (версия браузера, по умолчанию 127.0)*
 - *browserSize (размер окна браузера, по умолчанию 1920x1080)*
 - *baseUrl (адрес тестируемого веб-сайта)*
 - *remoteUrl (логин, пароль и адрес удаленного сервера Selenoid)*
@@ -73,17 +73,16 @@ ____
 ___
 ***Локальный запуск:***
 ```bash  
-gradle clean X5Group_test
+gradle clean test 
 ```
 
 ***Удалённый запуск через Jenkins:***
 ```bash  
-clean X5Group_test
-"-Dbrowser=${browser}"
-"-DbrowserVersion=${browserVersion}"
-"-DbrowserSize=${browserSize}"
-"-DbaseUrl=${baseUrl}"
-"-DremoteUrl=${remoteUrl}"
+-Dselenoid.url=${SELENOID_URL}  
+-Dselenoid.login=${SELENOID_LOGIN}  
+-Dselenoid.password=${SELENOID_PASSWORD}  
+-Dbrowser=${BROWSER} -Dbrowser.version=${BROWSER_VERSION}  
+-Dbrowser.size=${BROWSER_SIZE} clean ${TASK}
 ```
 ___
 <a id="allure"></a>
@@ -95,21 +94,6 @@ ___
 <p align="center">  
 <img title="Allure Overview Dashboard" src="images/screen/jenkins.png" width="850">  
 </p>  
-
-### *Тест-кейсы*
-
-<p align="center">  
-<img title="Allure Tests" src="images/screen/jenkins_tests.png" width="850">  
-</p>
-
-### *Графики*
-
-  <p align="center">  
-<img title="Allure Graphics" src="images/screen/allure_graths.bmp" width="850">
-
-<img title="Allure Graphics" src="images/screen/graphs.png" width="850">  
-</p>
-
 ___
 <a id="allure-testops"></a>
 ## <img alt="Allure" height="25" src="images/logo/Allure2.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/2197/dashboards">Allure TestOps</a>
