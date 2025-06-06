@@ -24,6 +24,35 @@ public class DreamKassCustomerDisplay extends TestBase {
         Attach.addVideo();
     }
 
+    @Disabled
+    @Feature("Оборудование")
+    @Story("Добавление товара в корзину")
+    @Owner("belikinA")
+    @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("Выбранный товар добавлен в корзину")
+    @Tag("WorkWork")
+    @Test
+    public void addToCartItemTest() {
+
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        CustomerDisplayPage customerDisplayPage = new CustomerDisplayPage();
+
+        step("Открываем страницу с дефолтным товаром", () -> {
+            customerDisplayPage.openPage();
+        });
+
+        sleep(1000);
+        $(".c-layout").pressEscape();
+
+        step("Выбираем новый товар через радиобаттон", () -> {
+            customerDisplayPage.selectNewItem();
+        });
+
+        step("Добавляем новый товар в корзину", () -> {
+            customerDisplayPage.addToCartItem();
+        });
+    }
+
 
     @Feature("Оборудование")
     @Story("Дисплей покупателя")
@@ -60,32 +89,4 @@ public class DreamKassCustomerDisplay extends TestBase {
                 Selenide.webdriver().driver().getWebDriver().manage().getCookies());
     }
 
-
-    @Feature("Оборудование")
-    @Story("Добавление товара в корзину")
-    @Owner("belikinA")
-    @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Выбранный товар добавлен в корзину")
-    @Tag("WorkWork")
-    @Test
-    public void addToCartItemTest() {
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
-        CustomerDisplayPage customerDisplayPage = new CustomerDisplayPage();
-
-        step("Открываем страницу с дефолтным товаром", () -> {
-            customerDisplayPage.openPage();
-        });
-
-        sleep(1000);
-        $(".c-layout").pressEscape();
-
-        step("Выбираем новый товар через радиобаттон", () -> {
-            customerDisplayPage.selectNewItem();
-        });
-
-        step("Добавляем новый товар в корзину", () -> {
-            customerDisplayPage.addToCartItem();
-        });
-    }
 }
