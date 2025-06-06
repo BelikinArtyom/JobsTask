@@ -85,10 +85,10 @@ ___
 ## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/allure/)</a>
 ___
 
-### *Основная страница отчёта*
+### *Главная страница Allure-отчета*
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screen/jenkins.png" width="850">  
+<img title="Allure Overview Dashboard" src="images/allure.png" width="850">  
 </p>  
 ___
 <a id="allure-testops"></a>
