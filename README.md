@@ -157,9 +157,9 @@ ___
 <p align="center">  
 <img title="Allure Overview Dashboard" src="images/allure.png" width="850">  
 </p>  
-___
 
-## <img src="media/logo/Telegram.svg" width="40" height="40" alt="Telegram"> Уведомления в Telegram
+
+## <img src="images/Telegram.svg" width="40" height="40" alt="Telegram"> Уведомления в Telegram
 
 ### После завершения сборки, бот, созданный в Telegram, автоматически обрабатывает и отправляет сообщение с результатом
 
