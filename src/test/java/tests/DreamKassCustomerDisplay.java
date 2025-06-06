@@ -24,7 +24,7 @@ public class DreamKassCustomerDisplay extends TestBase {
         Attach.addVideo();
     }
 
-    @Disabled
+
     @Feature("Оборудование")
     @Story("Добавление товара в корзину")
     @Owner("belikinA")
