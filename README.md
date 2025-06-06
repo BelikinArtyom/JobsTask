@@ -116,7 +116,7 @@ ____
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
+## <img alt="Jenkins" height="25" src="images/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/belikinA_cv_Job_work/)</a>
 ____
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/belikinA_cv_Job_work"><img src="images/jenk.png" alt="Jenkins" width="950"/></a>  
