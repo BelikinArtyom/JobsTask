@@ -24,7 +24,7 @@ public class DreamKassCustomerDisplay extends TestBase {
         Attach.addVideo();
     }
 
-
+    @Disabled
     @Feature("Оборудование")
     @Story("Дисплей покупателя")
     @Owner("belikinA")
@@ -60,7 +60,7 @@ public class DreamKassCustomerDisplay extends TestBase {
                 Selenide.webdriver().driver().getWebDriver().manage().getCookies());
     }
 
-    @Disabled
+
     @Feature("Оборудование")
     @Story("Добавление товара в корзину")
     @Owner("belikinA")
