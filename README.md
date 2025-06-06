@@ -52,7 +52,7 @@ ____
 ## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/"><img src="images/jenk.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/belikinA_cv_Job_work"><img src="images/jenk.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 
@@ -91,6 +91,4 @@ ___
 <img title="Allure Overview Dashboard" src="images/allure.png" width="850">  
 </p>  
 ___
-<a id="allure-testops"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure2.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/2197/dashboards">Allure TestOps</a>
-____
+
