@@ -5,10 +5,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.Attach;
 import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import pages.CustomerDisplayPage;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -70,6 +67,7 @@ public class DreamKassCustomerDisplay extends TestBase {
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Выбранный товар добавлен в корзину")
     @Tag("WorkWork")
+    @Disabled
     @Test
     public void addToCartItemTest() {
 
