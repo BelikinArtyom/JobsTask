@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.Step;
 import tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
