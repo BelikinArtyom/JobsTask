@@ -92,3 +92,10 @@ ___
 </p>  
 ___
 
+## <img src="media/logo/Telegram.svg" width="40" height="40" alt="Telegram"> Уведомления в Telegram
+
+### После завершения сборки, бот, созданный в Telegram, автоматически обрабатывает и отправляет сообщение с результатом
+
+<p align="center">
+<img src="images/tele.png" width="600" alt="Allure">
+</p>
