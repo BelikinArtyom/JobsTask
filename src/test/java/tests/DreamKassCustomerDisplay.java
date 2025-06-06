@@ -67,7 +67,6 @@ public class DreamKassCustomerDisplay extends TestBase {
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Выбранный товар добавлен в корзину")
     @Tag("WorkWork")
-    @Disabled
     @Test
     public void addToCartItemTest() {
 
