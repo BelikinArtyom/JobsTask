@@ -149,7 +149,7 @@ gradle clean test
 ```
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/belikinA_cv_Job_work/28/allure/)</a>
+## <img alt="Allure" height="25" src="images/Allure_Report.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/belikinA_cv_Job_work/28/allure/)</a>
 ___
 
 ### *Главная страница Allure-отчета*
