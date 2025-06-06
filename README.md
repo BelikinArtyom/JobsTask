@@ -104,12 +104,6 @@ ____
 <img title="Allure TestOps Dashboard" src="images/screen/allure_overview.png" width="850">  
 </p>  
 
-### *Ручные тест-кейсы*
-
-<p align="center">  
-<img title="Allure Tests" src="images/screen/manual_tests.png" width="850">  
-</p>
-
 ### *Авто тест-кейсы*
 
 <p align="center">  
