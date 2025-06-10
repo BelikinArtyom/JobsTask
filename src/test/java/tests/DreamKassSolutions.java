@@ -21,7 +21,7 @@ public class DreamKassSolutions extends TestBase {
     }
 
     @AfterEach
-    void Attach() {
+    void attach() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();

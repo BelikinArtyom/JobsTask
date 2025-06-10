@@ -1,13 +1,24 @@
 package pages;
 
 import com.codeborne.selenide.Selenide;
-import io.qameta.allure.Step;
+import com.codeborne.selenide.SelenideElement;
 import tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class CustomerDisplayPage extends TestBase {
+
+    private final SelenideElement
+            defaultItemName = $(".dk-section-position__item-name"),
+            itemDescription = $(".dk-section-position__item-description"),
+            itemPrice = $(".dk-section-position__item-price");
+
+
+
+
+
+
 
     public final CustomerDisplayPage openPage() {
         open ("https://dreamkas.ru/");
@@ -19,9 +30,14 @@ public class CustomerDisplayPage extends TestBase {
     }
 
     public CustomerDisplayPage defaultItem () {
-        $(".dk-section-position__item-name").shouldHave(text("Дисплей покупателя"));  // default name
-        $(".dk-section-position__item-description").shouldHave(text("Отображает стандартную информацию и сообщения о промоакциях и скидках. Высота стойки, углы поворота и наклона регулируются. Помещается строки по 20 символов."));
-        $(".dk-section-position__item-price").shouldHave(text("8 000 ₽"));
+        defaultItemName.shouldHave(text("Дисплей покупателя"));
+        itemDescription.shouldHave(text("Отображает стандартную информацию и сообщения о промоакциях и скидках. Высота стойки, углы поворота и наклона регулируются. Помещается строки по 20 символов."));
+        itemPrice.shouldHave(text("8 000 ₽"));
+
+
+//        $(".dk-section-position__item-name").shouldHave(text("Дисплей покупателя"));  // default name
+//        $(".dk-section-position__item-description").shouldHave(text("Отображает стандартную информацию и сообщения о промоакциях и скидках. Высота стойки, углы поворота и наклона регулируются. Помещается строки по 20 символов."));
+//        $(".dk-section-position__item-price").shouldHave(text("8 000 ₽"));
         return this;
     }
 
