@@ -32,9 +32,6 @@ public class CustomerDisplayPage extends TestBase {
         itemDescription.shouldHave(text("Отображает стандартную информацию и сообщения о промоакциях и скидках. Высота стойки, углы поворота и наклона регулируются. Помещается строки по 20 символов."));
         itemPrice.shouldHave(text("8 000 ₽"));
 
-//        $(".dk-section-position__item-name").shouldHave(text("Дисплей покупателя"));  // default name
-//        $(".dk-section-position__item-description").shouldHave(text("Отображает стандартную информацию и сообщения о промоакциях и скидках. Высота стойки, углы поворота и наклона регулируются. Помещается строки по 20 символов."));
-//        $(".dk-section-position__item-price").shouldHave(text("8 000 ₽"));
         return this;
     }
 
@@ -49,9 +46,6 @@ public class CustomerDisplayPage extends TestBase {
         itemDescription.shouldHave(text("Дисплей умеет отображать QR-код для платежей, показывать вес товара, способ оплаты, скидку, количество сдачи и вашу рекламу."));
         itemPrice.shouldHave(text("1 990 ₽"));
 
-//        $(".dk-section-position__item-name").shouldHave(text("Приложение Дримкас Дисплей"));  // default name
-//        $(".dk-section-position__item-description").shouldHave(text("Дисплей умеет отображать QR-код для платежей, показывать вес товара, способ оплаты, скидку, количество сдачи и вашу рекламу."));
-//        $(".dk-section-position__item-price").shouldHave(text("1 990 ₽"));
         return this;
     }
 
@@ -59,8 +53,6 @@ public class CustomerDisplayPage extends TestBase {
         addToCartButton.click();
         successPopup.shouldHave(text(" Добавлено в корзину"));
 
-//        $("[data-analytics-id=BUY-CLENT-CONFIGURATOR-ADD-BASKET-BUTTON]").click();
-//        $(".dk-unit-lead").shouldHave(text(" Добавлено в корзину"));
         return this;
     }
 }

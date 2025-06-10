@@ -14,6 +14,7 @@ import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
 public class DreamKassCustomerDisplay extends TestBase {
 
+    CustomerDisplayPage customerDisplayPage = new CustomerDisplayPage();
 
     @BeforeEach
     void allureListener() {
@@ -29,7 +30,6 @@ public class DreamKassCustomerDisplay extends TestBase {
         Attach.addVideo();
     }
 
-
     @Feature("Оборудование")
     @Story("Добавление товара в корзину")
     @Owner("belikinA")
@@ -38,9 +38,6 @@ public class DreamKassCustomerDisplay extends TestBase {
     @Tag("WorkWork")
     @Test
     public void addToCartItemTest() {
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
-        CustomerDisplayPage customerDisplayPage = new CustomerDisplayPage();
 
         step("Открываем страницу с дефолтным товаром", () -> {
             customerDisplayPage.openPage();
@@ -66,10 +63,6 @@ public class DreamKassCustomerDisplay extends TestBase {
     @Tag("WorkWork")
     @Test
     public void displayToggleTest () {
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
-        CustomerDisplayPage customerDisplayPage = new CustomerDisplayPage();
-
 
         step("Открываем страницу с дефолтным товаром", () -> {
             customerDisplayPage.openPage();
