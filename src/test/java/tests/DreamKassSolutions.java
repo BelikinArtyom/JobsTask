@@ -5,10 +5,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.Attach;
 import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import pages.DreamKassPage;
 
 import static com.codeborne.selenide.Condition.*;
@@ -18,6 +15,10 @@ import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
 public class DreamKassSolutions extends TestBase {
 
+    @BeforeEach
+    void allureListener() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+    }
 
     @AfterEach
     void Attach() {
@@ -37,7 +38,6 @@ public class DreamKassSolutions extends TestBase {
     @Test
     public void solutionHeadersTest() {
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
         DreamKassPage dreamKassPage = new DreamKassPage();
 
         step("Открываем страницу", () -> {
@@ -58,7 +58,6 @@ public class DreamKassSolutions extends TestBase {
     @Test
     public void servicePriceTest() {
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
         DreamKassPage dreamKassPage = new DreamKassPage();
 
         step("Открываем страницу", () -> {
@@ -79,7 +78,6 @@ public class DreamKassSolutions extends TestBase {
     @Test
     public void preOrderCallModelTest () {
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
         DreamKassPage dreamKassPage = new DreamKassPage();
 
         step("Открываем страницу", () -> {

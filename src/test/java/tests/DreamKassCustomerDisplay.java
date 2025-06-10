@@ -15,8 +15,13 @@ import static com.codeborne.selenide.logevents.SelenideLogger.step;
 public class DreamKassCustomerDisplay extends TestBase {
 
 
+    @BeforeEach
+    void allureListener() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+    }
+
     @AfterEach
-    void Attach() {
+    void attach() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
