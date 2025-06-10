@@ -17,7 +17,6 @@ ____
 
 * <a href="#telegram">Уведомление в Telegram при помощи бота</a>
 
-* <a href="#video">Примеры видео выполнения тестов на Selenoid</a>
 ____
 <a id="tools"></a>
 ## <a name="Технологии и инструменты">**Технологии и инструменты:**</a>
@@ -116,7 +115,7 @@ ____
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
+## <img alt="Jenkins" height="25" src="images/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/belikinA_cv_Job_work/)</a>
 ____
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/belikinA_cv_Job_work"><img src="images/jenk.png" alt="Jenkins" width="950"/></a>  
@@ -149,7 +148,7 @@ gradle clean test
 ```
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/belikinA_cv_Job_work/28/allure/)</a>
+## <img alt="Allure" height="25" src="images/Allure_Report.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/belikinA_cv_Job_work/28/allure/)</a>
 ___
 
 ### *Главная страница Allure-отчета*
@@ -159,6 +158,7 @@ ___
 </p>  
 
 
+<a id="telegram"></a>
 ## <img src="images/Telegram.svg" width="40" height="40" alt="Telegram"> Уведомления в Telegram
 
 ### После завершения сборки, бот, созданный в Telegram, автоматически обрабатывает и отправляет сообщение с результатом
