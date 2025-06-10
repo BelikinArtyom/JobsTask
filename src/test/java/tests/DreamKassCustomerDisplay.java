@@ -41,7 +41,6 @@ public class DreamKassCustomerDisplay extends TestBase {
             customerDisplayPage.openPage();
         });
 
-        sleep(1000);
         $(".c-layout").pressEscape();
 
         step("Выбираем новый товар через радиобаттон", () -> {
@@ -70,8 +69,6 @@ public class DreamKassCustomerDisplay extends TestBase {
         step("Открываем страницу с дефолтным товаром", () -> {
             customerDisplayPage.openPage();
         });
-
-        sleep(100);
 
         step("Проверяем текст дефолтного товара", () -> {
             customerDisplayPage.defaultItem();
