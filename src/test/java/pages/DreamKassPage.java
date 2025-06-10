@@ -38,15 +38,15 @@ public class DreamKassPage extends TestBase {
 
         catalogBannersLinks.get(1)
                 .shouldBe(visible)
-                .shouldHave(attribute("href", baseUrl + "/markirovka-tovarov/markirovka-tabaka/"));
+                .shouldHave(attribute("href", baseUrl + "/markirovka-tovarov/markirovka-obuvi/"));
 
         catalogBannersLinks.get(2)
                 .shouldBe(visible)
-                .shouldHave(attribute("href", baseUrl + "/markirovka-tovarov/markirovka-tabaka/"));
+                .shouldHave(attribute("href", baseUrl + "/uslugi/"));
 
         catalogBannersLinks.get(3)
                 .shouldBe(visible)
-                .shouldHave(attribute("href", baseUrl + "/markirovka-tovarov/markirovka-tabaka/"));
+                .shouldHave(attribute("href", baseUrl + "/dreamkas-start-atol/"));
 
 
 //        $$(".catalog-banners a").get(0)
